@@ -22,6 +22,7 @@
     -webkit-box-shadow: 4px 6px 25px 0px rgba(0,0,0,0.35);
     -moz-box-shadow: 4px 6px 25px 0px rgba(0,0,0,0.35);
     box-shadow: 4px 6px 25px 0px rgba(0,0,0,0.35);
+    color: #fcbd20;
 }
 
 .normalize-link {
@@ -31,6 +32,10 @@
 .normalize-link:hover {
     color: #212529;
     text-decoration: none;
+}
+
+.org-container:hover {
+    color: #212529;
 }
 
 .card-content {
@@ -72,4 +77,50 @@
 
 .adopt-animal {
     cursor: pointer;
+}
+
+.choose-btn {
+    display: block;
+    padding: 25px;
+    background-color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.35);
+}
+
+.choose-btn:hover {
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.35);
+}
+
+.choose-btn img {
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+}
+
+.choose-head {
+    display: none;
+}
+
+.dog-container, .cat-container {
+    display: none;
+}
+
+.go-back {
+    background-color: #fff;
+    padding: 25px;
+    float: left;
+    color: #888;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.35);
+}
+
+.go-back:hover {
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.35);
+    text-decoration: none;
+}
+
+.go-back i {
+    margin-right: 10px;
 }

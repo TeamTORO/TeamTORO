@@ -83,8 +83,35 @@
         <div class="container">
             <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 class="section-heading">Exciting! Who do you want to be part of your family?</h2>
+                <h2 class="section-heading choose-head">Exciting! Who do you want to be part of your family?</h2>
+                <h2 class="section-heading type-head">What are you looking for?</h2>
                 <div class="row animals-container">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                        <div class="row dog-container">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <a href="#" class="go-back"><i class="fa fa-arrow-left"></i>Go Back</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                        <div class="row cat-container">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <a href="#" class="go-back"><i class="fa fa-arrow-left"></i>Go Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row type-chooser m-top-25">
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+                        <a class="choose-dog choose-btn" href="#">
+                            <img src="img/dog.png" />
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+                        <a class="choose-cat choose-btn" href="#">
+                            <img src="img/cat.png" />
+                        </a>
+                    </div>
                 </div>
             </div>
             </div>
@@ -136,6 +163,15 @@
                 <div>
                     Woah, thanks for being interested in adopting!<br/>
                     Adopting goes straight to our partners, that means they handle the background check before the adoption.
+                    Just state the name of the cat or dog you want to adopt and that you came from us!
+                    <br/><br/>
+                    Here are MARO's requirements before adopting:
+                    <br/>- the rescues are free but not the vaccinations and we ask to participate in the expenses for spay/neuter which is usually all done already and saves you a lot of efforts
+                    <br/>- Php 1000 includes anti rabies, canine 5in1 resp. feline 3in1 vaccine incl. booster shot. A puppy needs 4 shots which cost Php 350 up at a vet clinic alone!
+                    <br/>- we got lots of questions about your place and setup. It must be suitable for our understanding. We prefer responsible adopters who are willing and can afford to bring a rescue to the vet if needed! 
+                    <br/>- to own an animal must be thought over and landlord and family must agree! One needs to be aware it will generate expenses and efforts
+                    <br/>- we may do a home visit and to start with you should visit the rescue to see if it accepts you and if the rescue is what you expected from a single photo
+                    <br/>- it's not an instant process. We made bad experiences before and had to take back rescues or were returned. We try to avoid this. We put a lot of efforts into their survival. Thanks for understanding! Pease be patient when you apply and remind us occassionally thanks!
                 </div>
             </div>
             <div class="modal-footer">
@@ -169,34 +205,9 @@
             messagingSenderId: "354394185647"
         };
         firebase.initializeApp(config);
-        
-        // ----- Adding card -----
-
-        // Template
-        var database = firebase.database();
-        var maroRef = database.ref('Partners/maro');
-        maroRef.once('value', function(snapshot) {
-            snapshot.forEach(function(childSnapshot) {
-                var childData = childSnapshot.val();
-                $('.animals-container').append(convertToTemplate(childData["name"], childData["image-url"]));
-            });
-        });
-
-        function convertToTemplate(name, imageUrl){
-            var template = '<div class="col-md-4 col-sm-12 m-top-25 adopt-animal" data-toggle="modal" data-target="#exampleModal">' +
-                                '<div class="card-container">' +
-                                    '<div class="card-image">' +
-                                        '<img src="' + imageUrl + '" />' +
-                                    '</div>' +
-                                    '<div class="card-content">' +
-                                        '<h3 class="card-name">' + name + '</h3>' +
-                                    '</div>' +
-                                '</div>' +
-                        '</div>';
-            return template;
-        }
-
     </script>
+
+    <script src="js/custom.js"></script>
 
   </body>
 
