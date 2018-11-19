@@ -2,6 +2,14 @@
     margin-top: 25px;
 }
 
+.m-top-50 {
+    margin-top: 50px;
+}
+
+.m-top-10 {
+    margin-top: 10px;
+}
+
 .center-flex {
     display: flex;
     align-items: center;
@@ -123,4 +131,13 @@
 
 .go-back i {
     margin-right: 10px;
+}
+
+.circular-img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.right-desc {
+    text-align: justify;
 }
