@@ -120,8 +120,8 @@
               paymentDataRequest.merchantInfo = {
                 // @todo a merchant ID is available for a production environment after approval by Google
                 // See {@link https://developers.google.com/pay/api/web/guides/test-and-deploy/integration-checklist|Integration checklist}
-                // merchantId: '01234567890123456789',
-                merchantName: 'Example Merchant'
+                merchantId: '16269668143222660502',
+                merchantName: 'Timothy Ouano'
               };
               return paymentDataRequest;
             }
@@ -170,7 +170,7 @@
             function addGooglePayButton() {
               const paymentsClient = getGooglePaymentsClient();
               const button =
-                  paymentsClient.createButton({onClick: onGooglePaymentButtonClicked});
+                  paymentsClient.createButton({onClick: onGooglePaymentButtonClicked, buttonType: "short"});
               document.getElementById('container').appendChild(button);
             }
             
@@ -182,10 +182,10 @@
              */
             function getGoogleTransactionInfo() {
               return {
-                currencyCode: 'USD',
+                currencyCode: 'PHP',
                 totalPriceStatus: 'FINAL',
                 // set to cart total
-                totalPrice: '1.00'
+                totalPrice: '50'
               };
             }
             
